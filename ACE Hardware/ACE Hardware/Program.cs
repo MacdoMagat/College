@@ -9,7 +9,7 @@ namespace ACE_Hardware
     static class Program
     {
 
-        public static string connstring = "Server=192.168.43.222;User Id=ubuntu;Password=ubuntu;Database=pos";
+        public static string connstring = "Server=localhost;User Id=root;Password=;Database=pos";
 
         public static LoginForm login;
 
