@@ -1,0 +1,781 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3E93092C-3DD0-45AD-9413-BE9B6522C85E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>eTAS.My.MyApplication</StartupObject>
+    <RootNamespace>eTAS</RootNamespace>
+    <AssemblyName>eTAS</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>eTAS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>eTAS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>46BD9F3AE4DB22E49912D334D63EB789833F008F</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>eTAS_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.Office.Interop.Word, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.8.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 6.8.8\Assemblies\v4.0\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.License">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\e-iceblue\Spire.Pdf\Bin\NET4.0\Spire.License.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.Pdf">
+      <HintPath>..\..\..\..\..\Desktop\Spire\Spire pdf\lib\net40\Spire.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\AdminChangePWForm.Designer.vb">
+      <DependentUpon>AdminChangePWForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminChangePWForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminChangeUNForm.Designer.vb">
+      <DependentUpon>AdminChangeUNForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminChangeUNForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminForm.Designer.vb">
+      <DependentUpon>AdminForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuditTrail\AuditTrailTaskDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AuditTrailTaskDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AuditTrail\AuditTrailTasksForm.Designer.vb">
+      <DependentUpon>AuditTrailTasksForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AuditTrail\AuditTrailTasksForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuditTrail\AuditTrailTasksReportForm.Designer.vb">
+      <DependentUpon>AuditTrailTasksReportForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AuditTrail\AuditTrailTasksReportForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuditTrail\AuditTrailTasksReportt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AuditTrailTasksReportt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ContainerForm\AboutForm.Designer.vb">
+      <DependentUpon>AboutForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ContainerForm\AboutForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContainerForm\RoundButton.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ContentSearch\ContentSearchPickHighlightForm.Designer.vb">
+      <DependentUpon>ContentSearchPickHighlightForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ContentSearch\ContentSearchPickHighlightForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\AdminLoginForm.Designer.vb">
+      <DependentUpon>AdminLoginForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login\AdminLoginForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminMasterAdminAddEditForm.Designer.vb">
+      <DependentUpon>AdminMasterAdminAddEditForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminMasterAdminAddEditForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminMasterAdminForm.Designer.vb">
+      <DependentUpon>AdminMasterAdminForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminMasterAdminForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ArchiveThesis\ArchiveThesisForm.Designer.vb">
+      <DependentUpon>ArchiveThesisForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ArchiveThesis\ArchiveThesisForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuditTrail\AuditTrailDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AuditTrailDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AuditTrail\AuditTrailDataSet.vb">
+      <DependentUpon>AuditTrailDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AuditTrail\AuditTrailForm.Designer.vb">
+      <DependentUpon>AuditTrailForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AuditTrail\AuditTrailForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuditTrail\AuditTrailLogsForm.Designer.vb">
+      <DependentUpon>AuditTrailLogsForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AuditTrail\AuditTrailLogsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuditTrail\AuditTrailLogsReport.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AuditTrailLogsReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AuditTrail\AuditTrailReportForm.Designer.vb">
+      <DependentUpon>AuditTrailReportForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AuditTrail\AuditTrailReportForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContentSearch\ContentSearchForm.Designer.vb">
+      <DependentUpon>ContentSearchForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ContentSearch\ContentSearchForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContentSearch\ContentSearchHighlightForm.Designer.vb">
+      <DependentUpon>ContentSearchHighlightForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ContentSearch\ContentSearchHighlightForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContentSearch\ContentSearchOpenForm.Designer.vb">
+      <DependentUpon>ContentSearchOpenForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ContentSearch\ContentSearchOpenForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContentSearch\ContentSearchPickForm.Designer.vb">
+      <DependentUpon>ContentSearchPickForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ContentSearch\ContentSearchPickForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContentSearch\ContentSearchSettingsForm.Designer.vb">
+      <DependentUpon>ContentSearchSettingsForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ContentSearch\ContentSearchSettingsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\DepartmentSelectionForm.Designer.vb">
+      <DependentUpon>DepartmentSelectionForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login\DepartmentSelectionForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\eTASStartForm.Designer.vb">
+      <DependentUpon>eTASStartForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login\eTASStartForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\GuestLoginForm.Designer.vb">
+      <DependentUpon>GuestLoginForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login\GuestLoginForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContainerForm\HomeForm.Designer.vb">
+      <DependentUpon>HomeForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ContainerForm\HomeForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContainerForm\ContainerForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContainerForm\ContainerForm.Designer.vb">
+      <DependentUpon>ContainerForm.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContainerForm\IntroForm.Designer.vb">
+      <DependentUpon>IntroForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ContainerForm\IntroForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\LoginForm.Designer.vb">
+      <DependentUpon>LoginForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login\LoginForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RemoveThesis\RemoveThesisForm.Designer.vb">
+      <DependentUpon>RemoveThesisForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveThesis\RemoveThesisForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RemoveThesis\RemoveThesisPasswordForm.Designer.vb">
+      <DependentUpon>RemoveThesisPasswordForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveThesis\RemoveThesisPasswordForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpellingAndGrammarCheck\SpellingAndGrammarCheckForm.Designer.vb">
+      <DependentUpon>SpellingAndGrammarCheckForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SpellingAndGrammarCheck\SpellingAndGrammarCheckForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThesisReport\ThesisReportDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ThesisReportDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Title Database\TitleDatabaseAddEditForm.Designer.vb">
+      <DependentUpon>TitleDatabaseAddEditForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Title Database\TitleDatabaseAddEditForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Title Database\TitleDatabaseDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TitleDatabaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Title Database\TitleDatabaseForm.Designer.vb">
+      <DependentUpon>TitleDatabaseForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Title Database\TitleDatabaseForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Title Database\TitleDatabaseReport.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TitleDatabaseReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Title Database\TitleDatabaseReportForm.Designer.vb">
+      <DependentUpon>TitleDatabaseReportForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Title Database\TitleDatabaseReportForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TopThesis\TopThesisSelectionTwoForm.Designer.vb">
+      <DependentUpon>TopThesisSelectionTwoForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TopThesis\TopThesisSelectionTwoForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewThesis\RetrieveThesisForm.Designer.vb">
+      <DependentUpon>RetrieveThesisForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ViewThesis\RetrieveThesisForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewThesis\RetrieveThesisViewForm.Designer.vb">
+      <DependentUpon>RetrieveThesisViewForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ViewThesis\RetrieveThesisViewForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TopThesis\TopThesisForm.Designer.vb">
+      <DependentUpon>TopThesisForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TopThesis\TopThesisForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TopThesis\TopThesisSelectionForm.Designer.vb">
+      <DependentUpon>TopThesisSelectionForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TopThesis\TopThesisSelectionForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewThesis\ViewThesis.Designer.vb">
+      <DependentUpon>ViewThesis.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ViewThesis\ViewThesis.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewThesis\ViewThesisDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ViewThesisDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ViewThesis\ViewThesisEditForm.Designer.vb">
+      <DependentUpon>ViewThesisEditForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ViewThesis\ViewThesisEditForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewThesis\ViewThesisReport.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ViewThesisReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ViewThesis\ViewThesisReportForm.Designer.vb">
+      <DependentUpon>ViewThesisReportForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ViewThesis\ViewThesisReportForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Admin\AdminChangePWForm.resx">
+      <DependentUpon>AdminChangePWForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\AdminChangeUNForm.resx">
+      <DependentUpon>AdminChangeUNForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\AdminForm.resx">
+      <DependentUpon>AdminForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuditTrail\AuditTrailTasksForm.resx">
+      <DependentUpon>AuditTrailTasksForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuditTrail\AuditTrailTasksReportForm.resx">
+      <DependentUpon>AuditTrailTasksReportForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuditTrail\AuditTrailTasksReportt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AuditTrailTasksReportt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContainerForm\AboutForm.resx">
+      <DependentUpon>AboutForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContentSearch\ContentSearchPickHighlightForm.resx">
+      <DependentUpon>ContentSearchPickHighlightForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\AdminLoginForm.resx">
+      <DependentUpon>AdminLoginForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\AdminMasterAdminAddEditForm.resx">
+      <DependentUpon>AdminMasterAdminAddEditForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\AdminMasterAdminForm.resx">
+      <DependentUpon>AdminMasterAdminForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ArchiveThesis\ArchiveThesisForm.resx">
+      <DependentUpon>ArchiveThesisForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuditTrail\AuditTrailForm.resx">
+      <DependentUpon>AuditTrailForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuditTrail\AuditTrailLogsForm.resx">
+      <DependentUpon>AuditTrailLogsForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuditTrail\AuditTrailLogsReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AuditTrailLogsReport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuditTrail\AuditTrailReportForm.resx">
+      <DependentUpon>AuditTrailReportForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContentSearch\ContentSearchForm.resx">
+      <DependentUpon>ContentSearchForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContentSearch\ContentSearchHighlightForm.resx">
+      <DependentUpon>ContentSearchHighlightForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContentSearch\ContentSearchOpenForm.resx">
+      <DependentUpon>ContentSearchOpenForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContentSearch\ContentSearchPickForm.resx">
+      <DependentUpon>ContentSearchPickForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContentSearch\ContentSearchSettingsForm.resx">
+      <DependentUpon>ContentSearchSettingsForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\DepartmentSelectionForm.resx">
+      <DependentUpon>DepartmentSelectionForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\eTASStartForm.resx">
+      <DependentUpon>eTASStartForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\GuestLoginForm.resx">
+      <DependentUpon>GuestLoginForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContainerForm\HomeForm.resx">
+      <DependentUpon>HomeForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContainerForm\ContainerForm.resx">
+      <DependentUpon>ContainerForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContainerForm\IntroForm.resx">
+      <DependentUpon>IntroForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\LoginForm.resx">
+      <DependentUpon>LoginForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RemoveThesis\RemoveThesisForm.resx">
+      <DependentUpon>RemoveThesisForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RemoveThesis\RemoveThesisPasswordForm.resx">
+      <DependentUpon>RemoveThesisPasswordForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpellingAndGrammarCheck\SpellingAndGrammarCheckForm.resx">
+      <DependentUpon>SpellingAndGrammarCheckForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Title Database\TitleDatabaseAddEditForm.resx">
+      <DependentUpon>TitleDatabaseAddEditForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Title Database\TitleDatabaseForm.resx">
+      <DependentUpon>TitleDatabaseForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Title Database\TitleDatabaseReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TitleDatabaseReport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Title Database\TitleDatabaseReportForm.resx">
+      <DependentUpon>TitleDatabaseReportForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TopThesis\TopThesisSelectionTwoForm.resx">
+      <DependentUpon>TopThesisSelectionTwoForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewThesis\RetrieveThesisForm.resx">
+      <DependentUpon>RetrieveThesisForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewThesis\RetrieveThesisViewForm.resx">
+      <DependentUpon>RetrieveThesisViewForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TopThesis\TopThesisForm.resx">
+      <DependentUpon>TopThesisForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TopThesis\TopThesisSelectionForm.resx">
+      <DependentUpon>TopThesisSelectionForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewThesis\ViewThesis.resx">
+      <DependentUpon>ViewThesis.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewThesis\ViewThesisEditForm.resx">
+      <DependentUpon>ViewThesisEditForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewThesis\ViewThesisReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ViewThesisReport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewThesis\ViewThesisReportForm.resx">
+      <DependentUpon>ViewThesisReportForm.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AuditTrail\AuditTrailDataSet.xsc">
+      <DependentUpon>AuditTrailDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AuditTrail\AuditTrailDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AuditTrailDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="AuditTrail\AuditTrailDataSet.xss">
+      <DependentUpon>AuditTrailDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AuditTrail\AuditTrailTaskDataSet.xsc">
+      <DependentUpon>AuditTrailTaskDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AuditTrail\AuditTrailTaskDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AuditTrailTaskDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="AuditTrail\AuditTrailTaskDataSet.xss">
+      <DependentUpon>AuditTrailTaskDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="eTAS_TemporaryKey.pfx" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="ThesisReport\ThesisReportDataSet.xsc">
+      <DependentUpon>ThesisReportDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ThesisReport\ThesisReportDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ThesisReportDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="ThesisReport\ThesisReportDataSet.xss">
+      <DependentUpon>ThesisReportDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Title Database\TitleDatabaseDataSet.xsc">
+      <DependentUpon>TitleDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Title Database\TitleDatabaseDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TitleDatabaseDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Title Database\TitleDatabaseDataSet.xss">
+      <DependentUpon>TitleDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ViewThesis\ViewThesisDataSet.xsc">
+      <DependentUpon>ViewThesisDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ViewThesis\ViewThesisDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ViewThesisDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="ViewThesis\ViewThesisDataSet.xss">
+      <DependentUpon>ViewThesisDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Acrobat">
+      <Guid>{E64169B3-3592-47D2-816E-602C5C13F328}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\homepage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\truehomepage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loginTS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PANEL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GUEST.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GUEST1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\homepage.psd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\homepage1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ADMINbg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGINbg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GUESTbg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+    <None Include="Resources\ABOUT1.png" />
+    <None Include="Resources\ABOUT.png" />
+    <None Include="Resources\main home.png" />
+    <None Include="Resources\home 4.png" />
+    <None Include="Resources\home 3.png" />
+    <None Include="Resources\home 2.png" />
+    <None Include="Resources\home 1.png" />
+    <None Include="Resources\homepage.jpg" />
+    <None Include="Resources\homepage2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
